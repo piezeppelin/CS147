@@ -41,7 +41,7 @@
 		
 			
 		<!-- This is where the map gets inserted -->
-		<div id="mapcanvas2" style="height:315px;width:320px"></div>
+		<div id="mapcanvas" style="height:315px;width:320px"></div>
 		
 
 		<script type="text/javascript">
@@ -119,7 +119,7 @@
 		        mapTypeId: google.maps.MapTypeId.ROADMAP
 		    };
 		
-		    map = new google.maps.Map(document.getElementById("mapcanvas2"), myOptions);
+		    map = new google.maps.Map(document.getElementById("mapcanvas"), myOptions);
 		
 		    var marker = new google.maps.Marker({
 		        position: latlng,
@@ -157,7 +157,7 @@
 		            renderer.setMap(map);
 		
 					// Uncomment the following to add a directions pane
-		            //ren.setPanel(document.getElementById("directionsPanel"));
+		            ren.setPanel(document.getElementById("directionsPanel"));
 		            service = new google.maps.DirectionsService();
 		
 		            service.route({
